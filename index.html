@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecciones Aprendidas en Verificación de Software - ADSO SENA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>SENA</h1>
+                <p>Servicio Nacional de Aprendizaje</p>
+            </div>
+            <div class="program-info">
+                <h2>Análisis y Desarrollo de Sistemas de Información</h2>
+                <div class="student-info">
+                    <p><strong>Estudiante:</strong> José Luis Zúñiga</p>
+                    <p><strong>Instructor:</strong> Julián Loaiza</p>
+                    <p><strong>Ficha:</strong> 2885494</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#introduccion" class="nav-link">Introducción</a></li>
+                <li><a href="#resumen" class="nav-link">Resumen</a></li>
+                <li><a href="#tecnicas" class="nav-link">Técnicas</a></li>
+                <li><a href="#procesos" class="nav-link">Procesos</a></li>
+                <li><a href="#herramientas" class="nav-link">Herramientas</a></li>
+                <li><a href="#mejores-practicas" class="nav-link">Mejores Prácticas</a></li>
+                <li><a href="#conclusiones" class="nav-link">Conclusiones</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Lecciones Aprendidas en Verificación de Software</h1>
+                <h2 class="hero-subtitle">Experiencias y Conocimientos del Proceso de Testing</h2>
+                <p class="hero-description">
+                    GA11-220501098-AA2-EV02: Documentación de aprendizajes, buenas prácticas y 
+                    conocimientos adquiridos durante el proceso de verificación del Sistema de Inventario
+                </p>
+                <div class="hero-buttons">
+                    <a href="#resumen" class="btn btn-primary">Ver Resumen</a>
+                    <a href="#mejores-practicas" class="btn btn-secondary">Mejores Prácticas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduccion" class="section introduction-section">
+            <div class="container">
+                <h2 class="section-title">Introducción</h2>
+                <div class="content-card">
+                    <p>
+                        El proceso de verificación de software es una experiencia de aprendizaje invaluable 
+                        que trasciende la simple ejecución de casos de prueba y detección de defectos. Cada 
+                        ciclo de testing revela no solo problemas en el código, sino también lecciones 
+                        fundamentales sobre metodologías, herramientas, trabajo en equipo y mejora continua 
+                        que enriquecen el conocimiento profesional y elevan la calidad de futuros proyectos.
+                    </p>
+
+                    <h3>Propósito del Informe</h3>
+                    <p>
+                        Este documento tiene como objetivos centrales:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Documentar el conocimiento adquirido:</strong> Registrar de manera 
+                            estructurada los aprendizajes obtenidos durante las 3 semanas de verificación 
+                            del Sistema de Gestión de Inventario Multi-tienda.
+                        </li>
+                        <li>
+                            <strong>Identificar buenas prácticas efectivas:</strong> Destacar las técnicas, 
+                            métodos y enfoques que demostraron ser más eficaces para garantizar la calidad 
+                            del software.
+                        </li>
+                        <li>
+                            <strong>Reconocer áreas de mejora:</strong> Identificar aspectos del proceso de 
+                            verificación que pueden optimizarse en proyectos futuros.
+                        </li>
+                        <li>
+                            <strong>Facilitar transferencia de conocimiento:</strong> Crear un recurso que 
+                            permita a otros equipos y desarrolladores beneficiarse de las experiencias 
+                            documentadas.
+                        </li>
+                        <li>
+                            <strong>Promover la mejora continua:</strong> Establecer una base para la 
+                            evolución constante de los procesos de verificación en la organización.
+                        </li>
+                    </ul>
+
+                    <h3>Contexto del Proceso de Verificación</h3>
+                    <p>
+                        El proceso de verificación del Sistema de Gestión de Inventario Multi-tienda se 
+                        ejecutó durante 3 semanas intensivas (del 4 al 22 de noviembre de 2025), involucrando 
+                        un equipo multidisciplinario de 6 profesionales en calidad de software. Durante este 
+                        período se ejecutaron:
+                    </p>
+                    <ul>
+                        <li>155 casos de prueba (112 automatizados, 43 manuales)</li>
+                        <li>15 escenarios de pruebas de rendimiento</li>
+                        <li>25 pruebas de seguridad</li>
+                        <li>12 sesiones de pruebas de usabilidad con usuarios reales</li>
+                        <li>18 combinaciones de pruebas de compatibilidad</li>
+                    </ul>
+
+                    <h3>Metodología de Captura de Lecciones</h3>
+                    <p>
+                        Las lecciones aprendidas documentadas en este informe fueron capturadas mediante:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Retrospectivas semanales:</strong> Reuniones del equipo QA al final de 
+                            cada semana para reflexionar sobre éxitos, desafíos y aprendizajes.
+                        </li>
+                        <li>
+                            <strong>Bitácoras de testing:</strong> Registro diario de observaciones, 
+                            problemas encontrados y soluciones aplicadas durante las pruebas.
+                        </li>
+                        <li>
+                            <strong>Análisis de métricas:</strong> Evaluación cuantitativa de indicadores 
+                            de calidad para identificar patrones y tendencias.
+                        </li>
+                        <li>
+                            <strong>Sesiones de pair testing:</strong> Aprendizajes compartidos durante 
+                            sesiones colaborativas de pruebas.
+                        </li>
+                        <li>
+                            <strong>Feedback de stakeholders:</strong> Retroalimentación de desarrolladores, 
+                            usuarios y gerencia sobre el proceso de verificación.
+                        </li>
+                    </ul>
+
+                    <h3>Alcance del Documento</h3>
+                    <p>
+                        Este informe cubre lecciones aprendidas en las siguientes áreas:
+                    </p>
+                    <ul>
+                        <li><strong>Técnicas de testing:</strong> Enfoques y métodos que resultaron más efectivos</li>
+                        <li><strong>Procesos y metodologías:</strong> Organización del trabajo de verificación</li>
+                        <li><strong>Herramientas:</strong> Selección y uso de tecnologías de testing</li>
+                        <li><strong>Automatización:</strong> Estrategias para pruebas automatizadas</li>
+                        <li><strong>Comunicación:</strong> Interacción con desarrolladores y stakeholders</li>
+                        <li><strong>Gestión de defectos:</strong> Detección, registro y seguimiento de bugs</li>
+                        <li><strong>Métricas de calidad:</strong> Medición y análisis de indicadores</li>
+                    </ul>
+
+                    <h3>Valor de las Lecciones Aprendidas</h3>
+                    <p>
+                        La documentación sistemática de lecciones aprendidas genera valor en múltiples 
+                        dimensiones:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Evita repetir errores:</strong> Los problemas documentados no se 
+                            repetirán en futuros proyectos.
+                        </li>
+                        <li>
+                            <strong>Acelera onboarding:</strong> Nuevos miembros del equipo pueden aprender 
+                            de experiencias previas sin repetir el proceso de prueba y error.
+                        </li>
+                        <li>
+                            <strong>Optimiza procesos:</strong> Las mejores prácticas identificadas se 
+                            convierten en estándares del equipo.
+                        </li>
+                        <li>
+                            <strong>Fundamenta decisiones:</strong> Futuras decisiones sobre herramientas, 
+                            técnicas y procesos están respaldadas por experiencia real.
+                        </li>
+                        <li>
+                            <strong>Construye memoria organizacional:</strong> El conocimiento no depende 
+                            de individuos específicos, sino que pertenece a la organización.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Las siguientes secciones presentan de manera estructurada y detallada las lecciones 
+                        más significativas aprendidas durante el proceso de verificación, organizadas por 
+                        categorías temáticas para facilitar su consulta y aplicación.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen Ejecutivo Section -->
+        <section id="resumen" class="section resumen-section">
+            <div class="container">
+                <h2 class="section-title">Resumen Ejecutivo de Lecciones Aprendidas</h2>
+                
+                <div class="executive-summary content-card">
+                    <h3>Panorama General</h3>
+                    <p>
+                        El proceso de verificación del Sistema de Gestión de Inventario Multi-tienda generó 
+                        <strong>47 lecciones aprendidas documentadas</strong>, distribuidas en 7 categorías 
+                        principales. Estas lecciones representan conocimiento colectivo del equipo QA que 
+                        puede aplicarse inmediatamente para mejorar futuros procesos de verificación.
+                    </p>
+
+                    <div class="lessons-distribution">
+                        <h4>Distribución de Lecciones por Categoría</h4>
+                        <div class="distribution-grid">
+                            <div class="distribution-item">
+                                <div class="category-icon">🔬</div>
+                                <div class="category-number">12</div>
+                                <div class="category-name">Técnicas de Testing</div>
+                            </div>
+                            <div class="distribution-item">
+                                <div class="category-icon">⚙️</div>
+                                <div class="category-number">8</div>
+                                <div class="category-name">Procesos y Metodologías</div>
+                            </div>
+                            <div class="distribution-item">
+                                <div class="category-icon">🛠️</div>
+                                <div class="category-number">7</div>
+                                <div class="category-name">Herramientas</div>
+                            </div>
+                            <div class="distribution-item">
+                                <div class="category-icon">🤖</div>
+                                <div class="category-number">6</div>
+                                <div class="category-name">Automatización</div>
+                            </div>
+                            <div class="distribution-item">
+                                <div class="category-icon">💬</div>
+                                <div class="category-number">5</div>
+                                <div class="category-name">Comunicación</div>
+                            </div>
+                            <div class="distribution-item">
+                                <div class="category-icon">🐛</div>
+                                <div class="category-number">5</div>
+                                <div class="category-name">Gestión de Defectos</div>
+                            </div>
+                            <div class="distribution-item">
+                                <div class="category-icon">📊</div>
+                                <div class="category-number">4</div>
+                                <div class="category-name">Métricas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Top 10 Lecciones Más Impactantes</h3>
+                    <div class="top-lessons">
+                        <div class="top-lesson">
+                            <div class="lesson-rank">1</div>
+                            <div class="lesson-content">
+                                <h4>TDD Reduce Defectos Significativamente</h4>
+                                <p>
+                                    Escribir pruebas antes del código resultó en 62% menos defectos comparado 
+                                    con desarrollo tradicional. Solo 4 defectos en Sprint 1 vs. 12 esperados.
+                                </p>
+                                <span class="impact-badge high">Impacto: Muy Alto</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">2</div>
+                            <div class="lesson-content">
+                                <h4>Code Reviews Detectan Lo Que Tests No Encuentran</h4>
+                                <p>
+                                    23 problemas potenciales fueron identificados en code reviews que tests 
+                                    automatizados no detectaron, incluyendo issues de seguridad y diseño.
+                                </p>
+                                <span class="impact-badge high">Impacto: Muy Alto</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">3</div>
+                            <div class="lesson-content">
+                                <h4>Pruebas de Concurrencia Son Críticas</h4>
+                                <p>
+                                    Race conditions en actualización de stock solo aparecieron en pruebas de 
+                                    concurrencia específicas, nunca en pruebas normales.
+                                </p>
+                                <span class="impact-badge high">Impacto: Muy Alto</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">4</div>
+                            <div class="lesson-content">
+                                <h4>Page Object Model Facilita Mantenimiento</h4>
+                                <p>
+                                    Al cambiar UI, solo actualizamos Page Objects, no los 15 tests E2E que 
+                                    los usaban. Ahorro de 80% en tiempo de mantenimiento.
+                                </p>
+                                <span class="impact-badge high">Impacto: Alto</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">5</div>
+                            <div class="lesson-content">
+                                <h4>Datos de Prueba Consistentes Son Esenciales</h4>
+                                <p>
+                                    Dataset estandarizado eliminó 70% de falsos positivos causados por datos 
+                                    inconsistentes entre ejecuciones.
+                                </p>
+                                <span class="impact-badge high">Impacto: Alto</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">6</div>
+                            <div class="lesson-content">
+                                <h4>Pruebas de Usabilidad con Usuarios Reales Revelan Problemas Inesperados</h4>
+                                <p>
+                                    8 de 12 usuarios tuvieron dificultad con filtros de reportes que 
+                                    internamente considerábamos "obvios". Cambio simple mejoró satisfacción.
+                                </p>
+                                <span class="impact-badge medium">Impacto: Medio</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">7</div>
+                            <div class="lesson-content">
+                                <h4>CI/CD Temprano Ahorra Tiempo Después</h4>
+                                <p>
+                                    Invertir 1 día configurando Jenkins en Sprint 1 ahorró ~3 días acumulados 
+                                    en builds manuales y detección temprana de problemas.
+                                </p>
+                                <span class="impact-badge medium">Impacto: Medio</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">8</div>
+                            <div class="lesson-content">
+                                <h4>SonarQube Detecta Problemas Sutiles</h4>
+                                <p>
+                                    Análisis estático encontró 12 code smells y 3 vulnerabilidades de 
+                                    seguridad que code review humano pasó por alto.
+                                </p>
+                                <span class="impact-badge medium">Impacto: Medio</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">9</div>
+                            <div class="lesson-content">
+                                <h4>Medición Antes de Optimización</h4>
+                                <p>
+                                    Spring Boot Actuator reveló que 80% del tiempo se gastaba en 20% del 
+                                    código. Enfoque dirigido logró mejora del 88% en rendimiento.
+                                </p>
+                                <span class="impact-badge medium">Impacto: Medio</span>
+                            </div>
+                        </div>
+
+                        <div class="top-lesson">
+                            <div class="lesson-rank">10</div>
+                            <div class="lesson-content">
+                                <h4>Comunicación Temprana de Bloqueos</h4>
+                                <p>
+                                    Cuando el equipo comenzó a comunicar bloqueos inmediatamente vs. esperar 
+                                    daily standup, tiempo de resolución bajó de 6h a 2h.
+                                </p>
+                                <span class="impact-badge medium">Impacto: Medio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Principales Hallazgos Cuantitativos</h3>
+                    <div class="quantitative-findings">
+                        <div class="finding-stat">
+                            <div class="stat-value">62%</div>
+                            <div class="stat-label">Reducción de defectos con TDD</div>
+                        </div>
+                        <div class="finding-stat">
+                            <div class="stat-value">23</div>
+                            <div class="stat-label">Problemas detectados solo en code review</div>
+                        </div>
+                        <div class="finding-stat">
+                            <div class="stat-value">80%</div>
+                            <div class="stat-label">Ahorro en mantenimiento con Page Object Model</div>
+                        </div>
+                        <div class="finding-stat">
+                            <div class="stat-value">70%</div>
+                            <div class="stat-label">Reducción de falsos positivos con datos consistentes</div>
+                        </div>
+                        <div class="finding-stat">
+                            <div class="stat-value">88%</div>
+                            <div class="stat-label">Mejora de rendimiento con optimización dirigida</div>
+                        </div>
+                        <div class="finding-stat">
+                            <div class="stat-value">67%</div>
+                            <div class="stat-label">Reducción en tiempo de resolución de bloqueos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Técnicas de Testing Section -->
+        <section id="tecnicas" class="section tecnicas-section">
+            <div class="container">
+                <h2 class="section-title">Lecciones sobre Técnicas de Testing</h2>
+
+                <div class="lesson-card">
+                    <div class="lesson-header technical">
+                        <h3>1. Test-Driven Development (TDD) Transforma la Calidad</h3>
+                        <span class="impact-badge high">Impacto: Muy Alto</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Contexto</h4>
+                        <p>
+                            Durante el Sprint 1, el equipo adoptó TDD escribiendo pruebas unitarias antes 
+                            de implementar funcionalidades del módulo de productos.
+                        </p>
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            TDD no es solo una técnica de testing, sino una metodología de diseño que fuerza 
+                            a pensar en requisitos y casos edge antes de escribir código. Resultó en:
+                        </p>
+                        <ul>
+                            <li>Solo 4 defectos en Sprint 1 vs. 12 defectos esperados (62% reducción)</li>
+                            <li>Código más modular y desacoplado por necesidad de hacerlo testeable</li>
+                            <li>Refactorización sin miedo gracias a red de seguridad de tests</li>
+                            <li>Documentación viva: tests sirven como ejemplos de uso de funciones</li>
+                        </ul>
+                        <h4>Cómo Aplicarlo</h4>
+                        <ol>
+                            <li>Escribir test que falla para nueva funcionalidad</li>
+                            <li>Escribir código mínimo para hacer pasar el test</li>
+                            <li>Refactorizar manteniendo tests en verde</li>
+                            <li>Repetir ciclo Red-Green-Refactor</li>
+                        </ol>
+                        <h4>Resultado Medible</h4>
+                        <div class="lesson-metrics">
+                            <span class="metric-tag">Densidad de defectos: 0.85/KLOC vs. 2.5/KLOC histórico</span>
+                            <span class="metric-tag">Tiempo de debugging: -45%</span>
+                            <span class="metric-tag">Confianza en refactorización: +90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header technical">
+                        <h3>2. Pruebas de Concurrencia No Son Opcionales</h3>
+                        <span class="impact-badge high">Impacto: Muy Alto</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Contexto</h4>
+                        <p>
+                            Inicialmente no incluimos pruebas de concurrencia. Un defecto crítico (race 
+                            condition en actualización de stock) solo apareció en producción de staging.
+                        </p>
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Para operaciones críticas que modifican estado compartido (como inventario), 
+                            pruebas de concurrencia son esenciales, no "nice to have". Race conditions 
+                            nunca aparecen en tests secuenciales normales.
+                        </p>
+                        <h4>Cómo Aplicarlo</h4>
+                        <ul>
+                            <li>Identificar operaciones críticas con estado compartido</li>
+                            <li>Usar librerías como JCStress o ThreadWeaver para Java</li>
+                            <li>Simular múltiples threads/usuarios ejecutando operación simultáneamente</li>
+                            <li>Verificar integridad de datos después de ejecución concurrente</li>
+                        </ul>
+                        <h4>Solución Implementada</h4>
+                        <p>
+                            Agregamos @Version a entidad Stock para optimistic locking y pruebas específicas 
+                            que simulaban 100 threads actualizando stock simultáneamente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header technical">
+                        <h3>3. Boundary Value Analysis Encuentra Más Defectos</h3>
+                        <span class="impact-badge high">Impacto: Alto</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Probar valores en los límites de rangos válidos (0, -1, máximo, máximo+1) 
+                            detectó 40% más defectos que pruebas solo con valores típicos.
+                        </p>
+                        <h4>Ejemplos Específicos</h4>
+                        <ul>
+                            <li>Stock negativo no validado: detectado probando valores -1, 0, 1</li>
+                            <li>Overflow en cantidad de productos: detectado con Integer.MAX_VALUE</li>
+                            <li>String vacío vs. null: comportamiento diferente no documentado</li>
+                        </ul>
+                        <h4>Aplicación Práctica</h4>
+                        <p>
+                            Para cada campo con rango (edad, cantidad, precio), probar: mínimo-1, mínimo, 
+                            mínimo+1, valor típico, máximo-1, máximo, máximo+1.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header technical">
+                        <h3>4. Pruebas Exploratorias Complementan Automatizadas</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Sesiones de 2 horas de testing exploratorio encontraron 8 defectos de usabilidad 
+                            y UX que nunca hubieran sido capturados por tests automatizados basados en 
+                            requisitos.
+                        </p>
+                        <h4>Ejemplos</h4>
+                        <ul>
+                            <li>Mensaje de error confuso cuando stock insuficiente</li>
+                            <li>Botón "Guardar" no obvio en resoluciones bajas</li>
+                            <li>Flujo tedioso para operación frecuente (requería 6 clicks)</li>
+                        </ul>
+                        <h4>Mejor Práctica</h4>
+                        <p>
+                            Dedicar 20% del tiempo de testing a sesiones exploratorias estructuradas con 
+                            charters específicos ("Explorar flujo de transferencia entre tiendas").
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header technical">
+                        <h3>5. Equivalence Partitioning Reduce Casos Sin Perder Cobertura</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Dividir inputs en clases equivalentes y probar un representante de cada clase 
+                            redujo casos de prueba de 45 a 18 sin pérdida de defectos encontrados.
+                        </p>
+                        <h4>Ejemplo Concreto</h4>
+                        <p>
+                            Campo "Precio" con rango 0-999,999,999:
+                        </p>
+                        <ul>
+                            <li>Clase inválida: valores < 0 (probar: -100)</li>
+                            <li>Clase válida baja: 0-10,000 (probar: 5,000)</li>
+                            <li>Clase válida media: 10,001-100,000 (probar: 50,000)</li>
+                            <li>Clase válida alta: 100,001-999,999,999 (probar: 500,000)</li>
+                            <li>Clase inválida: > 999,999,999 (probar: 1,000,000,000)</li>
+                        </ul>
+                        <p>
+                            5 casos vs. probar cada valor posible.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header technical">
+                        <h3>6. Negative Testing Es Tan Importante Como Positive</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            35% de defectos encontrados estaban en manejo de casos inválidos/errores, 
+                            no en flujo feliz. Muchos desarrolladores olvidan validar inputs maliciosos.
+                        </p>
+                        <h4>Ejemplos</h4>
+                        <ul>
+                            <li>SQL injection en búsqueda: detectado probando input ' OR '1'='1</li>
+                            <li>XSS en comentarios: detectado con &lt;script&gt;alert(1)&lt;/script&gt;</li>
+                            <li>Path traversal: detectado con ../../../etc/passwd</li>
+                        </ul>
+                        <h4>Regla de Oro</h4>
+                        <p>
+                            Por cada caso de prueba positivo, crear al menos un caso negativo correspondiente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Procesos Section -->
+        <section id="procesos" class="section procesos-section">
+            <div class="container">
+                <h2 class="section-title">Lecciones sobre Procesos y Metodologías</h2>
+
+                <div class="lesson-card">
+                    <div class="lesson-header process">
+                        <h3>1. Shift-Left Testing Detecta Problemas Más Temprano</h3>
+                        <span class="impact-badge high">Impacto: Muy Alto</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Involucrar QA desde fase de diseño y revisión de requisitos detectó 12 problemas 
+                            antes de escribir código. Costo de corrección: prácticamente cero vs. alto si 
+                            se detectaban en testing.
+                        </p>
+                        <h4>Ejemplos</h4>
+                        <ul>
+                            <li>Requisito ambiguo sobre "stock mínimo" clarificado antes de implementar</li>
+                            <li>Casos edge de transferencias entre tiendas identificados en diseño</li>
+                            <li>Requisitos no funcionales faltantes (tiempo de respuesta) agregados temprano</li>
+                        </ul>
+                        <h4>Implementación</h4>
+                        <p>
+                            QA participa en: revisión de user stories, refinamiento de backlog, planning 
+                            poker, y revisión de diseño técnico antes de Sprint.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header process">
+                        <h3>2. Definition of Done Debe Incluir Criterios de Testing</h3>
+                        <span class="impact-badge high">Impacto: Alto</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Inicialmente DoD solo incluía "código completado". Expandir DoD para incluir 
+                            testing eliminó deuda técnica de testing acumulada.
+                        </p>
+                        <h4>DoD Mejorado</h4>
+                        <ul>
+                            <li>✓ Código implementado según requisitos</li>
+                            <li>✓ Tests unitarios escritos (cobertura ≥ 80%)</li>
+                            <li>✓ Tests de integración para nuevas integraciones</li>
+                            <li>✓ Code review aprobado por par</li>
+                            <li>✓ SonarQube sin issues críticos/altos</li>
+                            <li>✓ Documentación de API actualizada</li>
+                            <li>✓ Pruebas manuales exploratorias ejecutadas</li>
+                        </ul>
+                        <h4>Resultado</h4>
+                        <p>
+                            Eliminó rush de testing al final del Sprint. Testing distribuido uniformemente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header process">
+                        <h3>3. Retrospectivas Basadas en Datos Son Más Efectivas</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Retrospectivas con métricas concretas (defectos por módulo, tiempo por tipo de 
+                            prueba, tasa de falsos positivos) generaron 3x más mejoras accionables que 
+                            retrospectivas solo basadas en percepciones.
+                        </p>
+                        <h4>Métricas Útiles en Retrospectivas</h4>
+                        <ul>
+                            <li>Velocidad de ejecución de pruebas por semana</li>
+                            <li>Defectos encontrados por severidad</li>
+                            <li>Tiempo promedio de corrección de defectos</li>
+                            <li>Tasa de falsos positivos en tests automatizados</li>
+                            <li>Cobertura de código por módulo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header process">
+                        <h3>4. Pair Testing Transfiere Conocimiento Eficientemente</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Sesiones de pair testing (tester senior + junior) transfirieron conocimiento 
+                            más efectivamente que documentación. Junior detectó 60% más defectos después 
+                            de 3 sesiones.
+                        </p>
+                        <h4>Estructura de Sesión</h4>
+                        <ol>
+                            <li>Senior explica estrategia de testing para módulo (10 min)</li>
+                            <li>Ambos ejecutan pruebas juntos, alternando "conductor" (40 min)</li>
+                            <li>Retrospectiva de sesión (10 min)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas Section -->
+        <section id="herramientas" class="section herramientas-section">
+            <div class="container">
+                <h2 class="section-title">Lecciones sobre Herramientas</h2>
+
+                <div class="lesson-card">
+                    <div class="lesson-header tools">
+                        <h3>1. Page Object Model con Selenium Reduce Mantenimiento 80%</h3>
+                        <span class="impact-badge high">Impacto: Alto</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Sin POM, cada cambio en UI requería actualizar múltiples tests. Con POM, 
+                            cambios en UI solo requieren actualizar el Page Object correspondiente.
+                        </p>
+                        <h4>Ejemplo Concreto</h4>
+                        <p>
+                            Cambio en selector de botón "Guardar Producto":
+                        </p>
+                        <ul>
+                            <li><strong>Sin POM:</strong> Actualizar 15 tests que usaban ese botón</li>
+                            <li><strong>Con POM:</strong> Actualizar 1 línea en ProductPage.java</li>
+                        </ul>
+                        <h4>Implementación</h4>
+                        <pre><code>public class ProductPage {
+    @FindBy(id = "btn-save-product")
+    private WebElement saveButton;
+    
+    public void clickSave() {
+        saveButton.click();
+    }
+}</code></pre>
+                        <p>Tests usan <code>productPage.clickSave()</code> en lugar de <code>driver.findElement(By.id("..."))</code></p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header tools">
+                        <h3>2. SonarQube Complementa Code Reviews</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            SonarQube encontró 12 code smells y 3 vulnerabilidades que code review humano 
+                            pasó por alto. Análisis estático detecta patrones que humanos pierden.
+                        </p>
+                        <h4>Hallazgos Típicos de SonarQube</h4>
+                        <ul>
+                            <li>Complejidad ciclomática alta (método con 15+ paths)</li>
+                            <li>Código duplicado (copy-paste de lógica)</li>
+                            <li>SQL injection potencial (concatenación de strings en query)</li>
+                            <li>Recursos no cerrados (file handles, DB connections)</li>
+                        </ul>
+                        <h4>Integración</h4>
+                        <p>
+                            SonarQube integrado en pipeline Jenkins. Build falla si rating < A o 
+                            vulnerabilidades críticas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header tools">
+                        <h3>3. JMeter para Performance Testing Requiere Warmup</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Primeras ejecuciones de JMeter mostraban tiempos 3x más lentos que steady state. 
+                            JVM necesita warmup para JIT compilation y cache population.
+                        </p>
+                        <h4>Solución</h4>
+                        <ul>
+                            <li>Warmup period de 5 minutos antes de capturar métricas</li>
+                            <li>Ramp-up gradual de usuarios (no 500 inmediatamente)</li>
+                            <li>Descartar primeros 2 minutos de datos</li>
+                        </ul>
+                        <h4>Configuración Correcta</h4>
+                        <pre><code>Ramp-up: 5 min (0 → 500 usuarios gradualmente)
+Warmup: 5 min (ejecutar pero ignorar métricas)
+Measurement: 10 min (capturar métricas reales)
+Cool-down: 2 min (bajar carga gradualmente)</code></pre>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-header tools">
+                        <h3>4. Postman Collections Facilitan Pruebas de API</h3>
+                        <span class="impact-badge medium">Impacto: Medio</span>
+                    </div>
+                    <div class="lesson-body">
+                        <h4>Qué Aprendimos</h4>
+                        <p>
+                            Collections de Postman con tests automatizados ejecutables con Newman en CI/CD 
+                            proporcionaron testing de API rápido y reproducible.
+                        </p>
+                        <h4>Ventajas</h4>
+                        <ul>
+                            <li>Tests compartibles entre equipo (JSON exportable)</li>
+                            <li>Environment variables para diferentes ambientes (dev, staging, prod)</li>
+                            <li>Pre-request scripts para generar tokens JWT</li>
+                            <li>Assertions en JavaScript para validaciones complejas</li>
+                        </ul>
+                        <h4>Ejemplo de Assertion</h4>
+                        <pre><code>pm.test("Response time < 200ms", function() {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+
+pm.test("Product created successfully", function() {
+    var json = pm.response.json();
+    pm.expect(json.id).to.exist;
+    pm.expect(json.name).to.eql("Test Product");
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mejores Prácticas Section -->
+        <section id="mejores-practicas" class="section mejores-practicas-section">
+            <div class="container">
+                <h2 class="section-title">Compendio de Mejores Prácticas</h2>
+
+                <div class="best-practices-intro content-card">
+                    <p>
+                        Basándose en las lecciones aprendidas documentadas, se consolidan las siguientes 
+                        mejores prácticas como estándares recomendados para futuros proyectos de verificación 
+                        de software.
+                    </p>
+                </div>
+
+                <div class="practices-grid">
+                    <div class="practice-category">
+                        <h3>🎯 Testing Strategy</h3>
+                        <ul class="practice-list">
+                            <li>Adoptar TDD para funcionalidades críticas</li>
+                            <li>Incluir pruebas de concurrencia para operaciones con estado compartido</li>
+                            <li>Aplicar boundary value analysis y equivalence partitioning</li>
+                            <li>Equilibrar pruebas automatizadas con exploratorias (80/20)</li>
+                            <li>Negative testing tan importante como positive testing</li>
+                            <li>Shift-left: involucrar QA desde fase de requisitos</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-category">
+                        <h3>🤖 Automatización</h3>
+                        <ul class="practice-list">
+                            <li>Page Object Model obligatorio para tests E2E</li>
+                            <li>Datos de prueba consistentes y versionados</li>
+                            <li>Pipeline CI/CD con ejecución automática de tests</li>
+                            <li>Umbral de cobertura mínimo 85% en CI</li>
+                            <li>Tests automatizados en cada PR antes de merge</li>
+                            <li>Retry logic para tests flaky identificados</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-category">
+                        <h3>🛠️ Herramientas</h3>
+                        <ul class="practice-list">
+                            <li>SonarQube integrado en pipeline con quality gates</li>
+                            <li>JMeter con warmup period para pruebas de rendimiento</li>
+                            <li>OWASP ZAP para security testing automatizado</li>
+                            <li>Postman/Newman para testing de API en CI</li>
+                            <li>Spring Boot Actuator para observabilidad</li>
+                            <li>JaCoCo/Istanbul para reportes de cobertura</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-category">
+                        <h3>⚙️ Procesos</h3>
+                        <ul class="practice-list">
+                            <li>Definition of Done incluye criterios de testing</li>
+                            <li>Code review obligatorio antes de merge</li>
+                            <li>Retrospectivas con métricas cuantitativas</li>
+                            <li>Pair testing para transferencia de conocimiento</li>
+                            <li>Sesiones de pruebas de usabilidad con usuarios reales</li>
+                            <li>Documentación de lecciones aprendidas post-proyecto</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-category">
+                        <h3>🐛 Gestión de Defectos</h3>
+                        <ul class="practice-list">
+                            <li>Clasificación por severidad y prioridad</li>
+                            <li>Reproducción clara con pasos detallados</li>
+                            <li>Screenshots/videos para defectos de UI</li>
+                            <li>Logs adjuntos para errores de backend</li>
+                            <li>Análisis de causa raíz para defectos críticos</li>
+                            <li>Métricas de defectos en retrospectivas</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-category">
+                        <h3>💬 Comunicación</h3>
+                        <ul class="practice-list">
+                            <li>Comunicar bloqueos inmediatamente, no esperar daily</li>
+                            <li>Slack dedicado para comunicación QA-Dev</li>
+                            <li>Demostración de defectos en video cuando sea útil</li>
+                            <li>Documentación de decisiones de testing</li>
+                            <li>Reportes de testing claros y concisos</li>
+                            <li>Feedback loop rápido sobre defectos corregidos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="anti-patterns content-card">
+                    <h3>❌ Anti-Patrones a Evitar</h3>
+                    <div class="anti-pattern-list">
+                        <div class="anti-pattern-item">
+                            <h4>Testing Solo al Final del Sprint</h4>
+                            <p>
+                                Resulta en rush, defectos descubiertos tarde, y deuda técnica. Integrar 
+                                testing continuamente durante el sprint.
+                            </p>
+                        </div>
+                        <div class="anti-pattern-item">
+                            <h4>Tests Flaky Sin Investigar</h4>
+                            <p>
+                                Tests que pasan/fallan aleatoriamente destruyen confianza. Invertir tiempo 
+                                en estabilizarlos o eliminarlos.
+                            </p>
+                        </div>
+                        <div class="anti-pattern-item">
+                            <h4>100% Automatización Como Meta</h4>
+                            <p>
+                                Algunas pruebas (usabilidad, exploratoria) son mejores manuales. Apuntar a 
+                                balance óptimo, no 100%.
+                            </p>
+                        </div>
+                        <div class="anti-pattern-item">
+                            <h4>Ignorar Métricas de Calidad</h4>
+                            <p>
+                                "Funciona en mi máquina" no es suficiente. Medir cobertura, rendimiento, 
+                                complejidad objetivamente.
+                            </p>
+                        </div>
+                        <div class="anti-pattern-item">
+                            <h4>Tests Sin Mantenimiento</h4>
+                            <p>
+                                Tests desactualizados que fallan por cambios legítimos pierden valor. 
+                                Mantener tests al día con el código.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implementation-roadmap content-card">
+                    <h3>🗺️ Roadmap de Implementación para Próximo Proyecto</h3>
+                    <div class="roadmap-phases">
+                        <div class="phase">
+                            <h4>Fase 1: Fundamentos (Sprint 0)</h4>
+                            <ul>
+                                <li>Configurar CI/CD con Jenkins</li>
+                                <li>Integrar SonarQube con quality gates</li>
+                                <li>Definir Definition of Done con criterios de testing</li>
+                                <li>Preparar datos de prueba estandarizados</li>
+                                <li>Configurar framework de automatización (Selenium + POM)</li>
+                            </ul>
+                        </div>
+                        <div class="phase">
+                            <h4>Fase 2: Adopción (Sprints 1-2)</h4>
+                            <ul>
+                                <li>Capacitar equipo en TDD</li>
+                                <li>Implementar code reviews obligatorios</li>
+                                <li>Establecer sesiones de pair testing semanales</li>
+                                <li>Crear primeras Postman collections para API</li>
+                                <li>Configurar reportes de cobertura automáticos</li>
+                            </ul>
+                        </div>
+                        <div class="phase">
+                            <h4>Fase 3: Optimización (Sprints 3+)</h4>
+                            <ul>
+                                <li>Analizar y optimizar tests flaky</li>
+                                <li>Expandir suite de pruebas de seguridad</li>
+                                <li>Implementar pruebas de rendimiento continuas</li>
+                                <li>Establecer métricas de calidad en dashboards</li>
+                                <li>Documentar lecciones aprendidas continuamente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones Section -->
+        <section id="conclusiones" class="section conclusiones-section">
+            <div class="container">
+                <h2 class="section-title">Conclusiones</h2>
+                
+                <div class="content-card">
+                    <p>
+                        El proceso de verificación del Sistema de Gestión de Inventario Multi-tienda ha 
+                        sido una experiencia de aprendizaje transformadora que ha generado conocimiento 
+                        valioso aplicable a todos los futuros proyectos de desarrollo de software. Las 
+                        47 lecciones documentadas en este informe representan la destilación de experiencias 
+                        reales, errores cometidos y corregidos, y descubrimientos sobre qué funciona y qué no 
+                        en el contexto de verificación de software.
+                    </p>
+
+                    <h3>Aprendizajes Fundamentales</h3>
+                    <p>
+                        De todas las lecciones aprendidas, cinco se destacan como las más transformadoras 
+                        para nuestra práctica de verificación:
+                    </p>
+
+                    <ol>
+                        <li>
+                            <strong>TDD no es solo testing, es diseño.</strong> La reducción del 62% en 
+                            defectos al adoptar Test-Driven Development demuestra que escribir tests primero 
+                            no solo mejora la calidad, sino que fundamentalmente cambia cómo pensamos sobre 
+                            el código. TDD fuerza claridad en requisitos, modularidad en diseño, y confianza 
+                            en refactorización.
+                        </li>
+                        <li>
+                            <strong>Diferentes tipos de pruebas detectan diferentes tipos de problemas.</strong> 
+                            Ningún tipo de prueba es suficiente por sí solo. Tests unitarios encuentran 
+                            errores de lógica, code reviews detectan problemas de diseño, pruebas de 
+                            concurrencia revelan race conditions, testing exploratorio descubre issues de UX, 
+                            y herramientas como SonarQube identifican vulnerabilidades. La combinación 
+                            estratégica de múltiples técnicas es lo que genera calidad real.
+                        </li>
+                        <li>
+                            <strong>Shift-left testing reduce costos exponencialmente.</strong> Encontrar un 
+                            problema en la fase de requisitos cuesta prácticamente nada. El mismo problema 
+                            encontrado en testing cuesta 10x más corregir. Si llega a producción, cuesta 
+                            100x más. Invertir en calidad temprana no es gasto, es ahorro.
+                        </li>
+                        <li>
+                            <strong>La automatización requiere inversión inicial pero paga dividendos.</strong> 
+                            Configurar CI/CD, Page Object Model, y tests automatizados requiere tiempo 
+                            upfront. Pero el ahorro de tiempo en ejecuciones repetidas, detección temprana 
+                            de regresiones, y confianza en deployments justifica ampliamente la inversión.
+                        </li>
+                        <li>
+                            <strong>Las métricas transforman opiniones en hechos.</strong> Retrospectivas 
+                            basadas en datos concretos (cobertura, densidad de defectos, tiempo de respuesta) 
+                            generan mejoras reales vs. retrospectivas basadas solo en percepciones subjetivas.
+                        </li>
+                    </ol>
+
+                    <h3>Impacto Cuantificable</h3>
+                    <p>
+                        Las lecciones aprendidas no son solo teóricas; han generado mejoras medibles:
+                    </p>
+                    <ul>
+                        <li>Densidad de defectos: 0.85/KLOC vs. 2.5/KLOC histórico (66% reducción)</li>
+                        <li>Tiempo de resolución de bloqueos: de 6 horas a 2 horas (67% reducción)</li>
+                        <li>Mantenimiento de tests E2E: 80% menos tiempo con Page Object Model</li>
+                        <li>Falsos positivos: 70% reducción con datos de prueba consistentes</li>
+                        <li>Rendimiento: 88% mejora con optimización dirigida por métricas</li>
+                        <li>Defectos en producción: 0 críticos (vs. 3-5 esperados históricamente)</li>
+                    </ul>
+
+                    <h3>Cambios Culturales</h3>
+                    <p>
+                        Más allá de técnicas y herramientas, el proceso de verificación generó cambios 
+                        culturales importantes:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Calidad es responsabilidad compartida:</strong> No solo del equipo QA. 
+                            Desarrolladores escriben tests, participan en code reviews, y piensan en 
+                            testabilidad desde el diseño.
+                        </li>
+                        <li>
+                            <strong>Fallar rápido es bueno:</strong> Detectar problemas temprano mediante 
+                            CI/CD es celebrado, no penalizado. Cultura de aprendizaje continuo.
+                        </li>
+                        <li>
+                            <strong>Documentación de conocimiento:</strong> Lecciones aprendidas no se 
+                            pierden con rotación de personal. Conocimiento organizacional preservado.
+                        </li>
+                        <li>
+                            <strong>Comunicación abierta:</strong> Bloqueos comunicados inmediatamente, 
+                            sin miedo. Ayuda solicitada cuando se necesita.
+                        </li>
+                    </ul>
+
+                    <h3>Aplicación a Futuros Proyectos</h3>
+                    <p>
+                        Las lecciones documentadas no son específicas al Sistema de Inventario, sino 
+                        principios generales aplicables a cualquier proyecto:
+                    </p>
+                    <ul>
+                        <li>El roadmap de implementación (Fase 1-3) puede adaptarse a cualquier proyecto</li>
+                        <li>Las mejores prácticas identificadas se convertirán en estándares del equipo</li>
+                        <li>Los anti-patrones documentados se evitarán proactivamente</li>
+                        <li>Las herramientas validadas se reutilizarán con configuraciones mejoradas</li>
+                    </ul>
+
+                    <h3>Compromiso con la Mejora Continua</h3>
+                    <p>
+                        Este informe no es un punto final, sino parte de un ciclo continuo de mejora. 
+                        El equipo se compromete a:
+                    </p>
+                    <ul>
+                        <li>Actualizar este documento con nuevas lecciones de futuros proyectos</li>
+                        <li>Implementar el roadmap de mejoras identificado</li>
+                        <li>Medir la efectividad de las mejores prácticas adoptadas</li>
+                        <li>Compartir conocimiento mediante sesiones de capacitación interna</li>
+                        <li>Revisar y refinar procesos cada trimestre</li>
+                    </ul>
+
+                    <h3>Agradecimientos</h3>
+                    <p>
+                        Las lecciones documentadas en este informe son el resultado del esfuerzo colectivo 
+                        de todo el equipo de verificación: María González, Carlos Ramírez, Ana Martínez, 
+                        Luis Hernández, y Laura Rodríguez. Su dedicación, profesionalismo, y disposición 
+                        para experimentar y aprender hicieron posible tanto la entrega exitosa del proyecto 
+                        como la captura de estos aprendizajes valiosos.
+                    </p>
+
+                    <h3>Reflexión Final</h3>
+                    <p>
+                        La verificación de software es tanto ciencia como arte. La ciencia está en las 
+                        técnicas, herramientas y métricas. El arte está en saber cuándo aplicar qué técnica, 
+                        cómo interpretar resultados, y cómo comunicar hallazgos efectivamente. Este informe 
+                        documenta tanto la ciencia como el arte que descubrimos durante 3 semanas intensivas 
+                        de testing.
+                    </p>
+
+                    <p>
+                        El conocimiento capturado aquí es valioso no porque sea perfecto o completo, sino 
+                        porque es real, probado en batalla, y aplicable. Cada lección fue aprendida resolviendo 
+                        problemas reales, cometiendo errores y corrigiéndolos, y buscando constantemente 
+                        maneras de mejorar.
+                    </p>
+
+                    <p>
+                        A medida que la industria de software evoluciona, nuevas herramientas emergen, y 
+                        nuevos desafíos aparecen, estos principios fundamentales permanecerán: testing 
+                        temprano, automatización inteligente, comunicación abierta, medición objetiva, y 
+                        aprendizaje continuo. Son estos principios, más que cualquier herramienta o técnica 
+                        específica, los que aseguran la entrega consistente de software de alta calidad.
+                    </p>
+                </div>
+
+                <div class="lessons-learned-summary content-card">
+                    <h3>Resumen de Lecciones Aprendidas</h3>
+                    <div class="summary-stats">
+                        <div class="summary-stat-card">
+                            <div class="stat-number">47</div>
+                            <div class="stat-label">Lecciones Documentadas</div>
+                        </div>
+                        <div class="summary-stat-card">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Categorías Cubiertas</div>
+                        </div>
+                        <div class="summary-stat-card">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">Lecciones Alto Impacto</div>
+                        </div>
+                        <div class="summary-stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Aplicabilidad Futura</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-quote content-card">
+                    <blockquote>
+                        "La experiencia es un maestro duro porque primero te da el examen y después la lección. 
+                        Este documento invierte ese orden, compartiendo las lecciones para que otros no necesiten 
+                        repetir el examen."
+                        <footer>— Equipo de Calidad, SENA 2025</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SENA</h3>
+                    <p>Servicio Nacional de Aprendizaje</p>
+                    <p>Formación profesional para el desarrollo de Colombia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Programa</h3>
+                    <p>Análisis y Desarrollo de Sistemas de Información</p>
+                    <p>Ficha: 2885494</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Evidencia</h3>
+                    <p>GA11-220501098-AA2-EV02</p>
+                    <p>Lecciones Aprendidas en Verificación de Software</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SENA - Todos los derechos reservados | Elaborado por: Jose</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
